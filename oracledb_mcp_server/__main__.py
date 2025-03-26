@@ -73,35 +73,31 @@ def load_environment_variables(env_path: str = None):
 
         # Updating OracleDB connection string from environment variable
         if not os.getenv("COMMENT_DB_CONNECTION_STRING"):
-            logger.error("COMMENT_DB_CONNECTION_STRING environment variable is not set")
-            sys.exit(1)
+            logger.debug("COMMENT_DB_CONNECTION_STRING environment variable is not set")
         else:
             COMMENT_DB_CONNECTION_STRING = os.getenv("COMMENT_DB_CONNECTION_STRING")
             logger.debug("COMMENT_DB_CONNECTION_STRING: %s", COMMENT_DB_CONNECTION_STRING)
 
         # Updating OracleDB connection string from environment variable
         if not os.getenv("DB_CONNECTION_STRING"):
-            logger.error("DB_CONNECTION_STRING environment variable is not set")
-            sys.exit(1)
+            logger.debug("DB_CONNECTION_STRING environment variable is not set")
         else:
             DB_CONNECTION_STRING = os.getenv("DB_CONNECTION_STRING")
             logger.debug("DB_CONNECTION_STRING: %s", DB_CONNECTION_STRING)
 
         # Updating white listed table names from environment variable
-        if not os.getenv("TABLE_WHITE_LIST"):
-            logger.error("TABLE_WHITE_LIST environment variable is not set")
-            sys.exit(1)
-        else:
+        if os.getenv("TABLE_WHITE_LIST"):
             TABLE_WHITE_LIST = os.getenv("TABLE_WHITE_LIST").split(",")
             logger.debug("TABLE_WHITE_LIST: %s", TABLE_WHITE_LIST)
+        else:
+            logger.debug("TABLE_WHITE_LIST not set, will not filter tables")
 
         # Updating white listed column names from environment variable
-        if not os.getenv("COLUMN_WHITE_LIST"):
-            logger.error("COLUMN_WHITE_LIST environment variable is not set")
-            sys.exit(1)
-        else:
+        if os.getenv("COLUMN_WHITE_LIST"):
             COLUMN_WHITE_LIST = os.getenv("COLUMN_WHITE_LIST").split(",")
             logger.debug("COLUMN_WHITE_LIST: %s", COLUMN_WHITE_LIST)
+        else:
+            logger.debug("COLUMN_WHITE_LIST not set, will not filter columns")
         
         # Updating query limit size from environment variable
         if os.getenv("QUERY_LIMIT_SIZE"):
