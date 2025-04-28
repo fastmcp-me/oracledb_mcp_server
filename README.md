@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/mseep-audited.png)](https://mseep.ai/app/rahgadda-oracledb-mcp-server)
+
 # OracleDB MCP Server
 
 [![smithery badge](https://smithery.ai/badge/@rahgadda/oracledb_mcp_server)](https://smithery.ai/server/@rahgadda/oracledb_mcp_server)
