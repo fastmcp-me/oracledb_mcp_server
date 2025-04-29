@@ -1,8 +1,7 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/mseep-audited.png)](https://mseep.ai/app/rahgadda-oracledb-mcp-server)
 
 # OracleDB MCP Server
 
-[![smithery badge](https://smithery.ai/badge/@rahgadda/oracledb_mcp_server)](https://smithery.ai/server/@rahgadda/oracledb_mcp_server)
+[![smithery badge](https://smithery.ai/badge/@rahgadda/oracledb_mcp_server)](https://smithery.ai/server/@rahgadda/oracledb_mcp_server) [![MseeP.ai Security Assessment Badge](https://mseep.net/mseep-audited.png)](https://mseep.ai/app/rahgadda-oracledb-mcp-server)
 
 ## Overview
 - This project will install `MCP - Model Context Protocol Server`, that provides configured Oracle Database Table/Columns as context to LLM's.
